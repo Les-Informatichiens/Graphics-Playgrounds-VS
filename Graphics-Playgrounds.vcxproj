@@ -104,8 +104,10 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\application.cpp" />
+    <ClCompile Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\renderer.cpp" />
+    <ClCompile Include="src\application.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\ofApp.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.cpp" />
@@ -121,9 +123,11 @@
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
     <ClCompile Include="..\..\..\addons\ofxGui\src\ofxToggle.cpp" />
     <ClCompile Include="..\..\..\addons\ofxThreadedImageLoader\src\ofxThreadedImageLoader.cpp" />
+    <ClCompile Include="src\renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ofApp.h" />
+    <ClInclude Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\application.h" />
+    <ClInclude Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\renderer.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h" />
@@ -224,6 +228,8 @@
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxSliderGroup.h" />
     <ClInclude Include="..\..\..\addons\ofxGui\src\ofxToggle.h" />
     <ClInclude Include="..\..\..\addons\ofxThreadedImageLoader\src\ofxThreadedImageLoader.h" />
+    <ClInclude Include="src\application.h" />
+    <ClInclude Include="src\renderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
@@ -235,6 +241,17 @@
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
       <AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="bin\data\Consolas Bold.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\data\draw_depth_330_fs.glsl" />
+    <None Include="bin\data\draw_depth_330_vs.glsl" />
+    <None Include="bin\data\draw_normal_330_fs.glsl" />
+    <None Include="bin\data\draw_normal_330_vs.glsl" />
+    <None Include="bin\data\lambert_330_fs.glsl" />
+    <None Include="bin\data\lambert_330_vs.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ProjectExtensions>
