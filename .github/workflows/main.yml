@@ -20,7 +20,7 @@ jobs:
 
     - name: Move project to OpenFrameworks structure
       run: |
-        Move-Item -Path ${{ github.workspace }}/Graphics-Playgrounds -Destination D:/libs/openFrameworks/apps/myApps
+        Move-Item -Path ${{ github.workspace }}/* -Destination D:/libs/openFrameworks/apps/myApps/Graphics-Playgrounds -Force
 
 
     - name: Set up MSBuild path
