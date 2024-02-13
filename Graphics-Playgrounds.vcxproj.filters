@@ -49,12 +49,6 @@
     <ClCompile Include="..\..\..\addons\ofxThreadedImageLoader\src\ofxThreadedImageLoader.cpp">
       <Filter>addons\ofxThreadedImageLoader\src</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\renderer.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\application.cpp">
-      <Filter>src</Filter>
-    </ClCompile>
     <ClCompile Include="src\application.cpp" />
     <ClCompile Include="src\renderer.cpp" />
   </ItemGroup>
@@ -405,12 +399,6 @@
     </ClInclude>
     <ClInclude Include="..\..\..\addons\ofxThreadedImageLoader\src\ofxThreadedImageLoader.h">
       <Filter>addons\ofxThreadedImageLoader\src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\renderer.h">
-      <Filter>src</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\application.h">
-      <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\application.h" />
     <ClInclude Include="src\renderer.h" />

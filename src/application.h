@@ -44,13 +44,13 @@ public:
   bool is_key_press_left;
   bool is_key_press_right;
 
-  void setup();
-  void update();
-  void draw();
-  void exit();
+  void setup() override;
+  void update() override;
+  void draw() override;
+  void exit() override;
 
-  void keyPressed(int key);
-  void keyReleased(int key);
+  void keyPressed(int key) override;
+  void keyReleased(int key) override;
 
   std::string string_format_float_precision(float value, int precision);
   std::string string_format_int_pad(int value, size_t size, char pad);

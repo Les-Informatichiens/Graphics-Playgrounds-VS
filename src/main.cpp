@@ -2,7 +2,7 @@
 #include "application.h"
 
 //========================================================================
-int main( ){
+int main() {
 
 	//Use ofGLFWWindowSettings for more options like multi-monitor fullscreen
 	ofGLWindowSettings settings;
@@ -10,7 +10,7 @@ int main( ){
 	settings.windowMode = OF_WINDOW; //can also be OF_FULLSCREEN
 	settings.setGLVersion(4, 6);
 
-	auto window = ofCreateWindow(settings);
+	const auto window = ofCreateWindow(settings);
 
 	ofRunApp(window, make_shared<Application>());
 	ofRunMainLoop();

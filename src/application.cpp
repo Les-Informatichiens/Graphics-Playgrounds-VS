@@ -224,7 +224,7 @@ void Application::keyPressed(int key)
   }
 }
 
-void Application::keyReleased(int key)
+void Application::keyReleased(const int key)
 {
   switch (key)
   {
@@ -291,7 +291,7 @@ std::string Application::string_format_float_precision(float value, int precisio
 std::string Application::string_format_int_pad(int value, size_t size, char pad)
 {
   std::string str = std::to_string(value);
-  int count = size - std::min(size, str.size());
+  const int count = size - std::min(size, str.size());
   str.insert(0, count, pad);
   return str;
 }

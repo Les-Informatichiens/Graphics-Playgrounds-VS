@@ -104,8 +104,6 @@
     <PostBuildEvent />
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\application.cpp" />
-    <ClCompile Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\renderer.cpp" />
     <ClCompile Include="src\application.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.cpp" />
@@ -126,8 +124,6 @@
     <ClCompile Include="src\renderer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\application.h" />
-    <ClInclude Include="..\..\IFT3100H24\module05\EX03\IFT3100H23_CameraProjection\src\renderer.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpAnimation.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpMeshHelper.h" />
     <ClInclude Include="..\..\..\addons\ofxAssimpModelLoader\src\ofxAssimpModelLoader.h" />
