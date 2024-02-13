@@ -16,7 +16,7 @@ jobs:
         
     - name: Install OpenFrameworks
       run: |
-        git clone https://github.com/openframeworks/openFrameworks.git D:/libs/openFrameworks
+        git clone --recursive https://github.com/openframeworks/openFrameworks.git D:/libs/openFrameworks
 
     - name: Move project to OpenFrameworks structure
       run: |
