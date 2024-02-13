@@ -18,4 +18,4 @@ jobs:
       uses: microsoft/setup-msbuild@v2
 
     - name: Build solution
-      run: msbuild Graphics-Playgrounds.sln /p:Configuration=Release /p:Platform="Any CPU"
+      run: msbuild Graphics-Playgrounds.sln /p:Configuration=Release /p:Platform="x64"
