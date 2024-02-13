@@ -16,10 +16,15 @@ jobs:
         
     - name: Install OpenFrameworks
       run: |
-        git clone --depth 1 https://github.com/openframeworks/openFrameworks.git D:/libs/openFrameworks
+        git clone https://github.com/openframeworks/openFrameworks.git D:/libs/openFrameworks
+
+    - name: Move project to OpenFrameworks structure
+      run: |
+        Move-Item -Path ${{ github.workspace }}/Graphics-Playgrounds -Destination D:/libs/openFrameworks/apps/myApps
+
 
     - name: Set up MSBuild path
       uses: microsoft/setup-msbuild@v2
 
     - name: Build solution
-      run: msbuild Graphics-Playgrounds.sln /p:Configuration=Release /p:Platform="x64"
+      run: msbuild D:/libs/openFrameworks/apps/myApps/Graphics-Playgrounds/Graphics-Playgrounds.sln /p:Configuration=Release /p:Platform="x64"
