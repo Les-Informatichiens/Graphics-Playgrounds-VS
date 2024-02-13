@@ -1,0 +1,30 @@
+name: ci
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4.1.1
+      with:
+        fetch-depth: 0
+        
+    - name: Install OpenFrameworks
+      run: |
+        git clone --recursive https://github.com/openframeworks/openFrameworks.git D:/libs/openFrameworks
+
+    - name: Move project to OpenFrameworks structure
+      run: |
+        Move-Item -Path ${{ github.workspace }}/* -Destination D:/libs/openFrameworks/apps/myApps/Graphics-Playgrounds -Force
+
+
+    - name: Set up MSBuild path
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Build solution
+      run: msbuild D:/libs/openFrameworks/apps/myApps/Graphics-Playgrounds/Graphics-Playgrounds.sln /p:Configuration=Release /p:Platform="x64"
